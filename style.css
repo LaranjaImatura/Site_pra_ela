@@ -261,3 +261,16 @@ body {
   font-size: 34px;
   cursor: pointer;
 }
+
+@media (max-width: 768px) {
+  .button-column {
+    flex-direction: column; /* Empilha os botões em telas menores */
+    align-items: center; /* Centraliza os botões na tela */
+    gap: 15px; /* Reduz um pouco o espaço entre os botões */
+  }
+
+  .card-btn {
+    width: 90%; /* Faz os botões ocuparem mais espaço na tela */
+    text-align: center;
+  }
+}
