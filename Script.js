@@ -47,6 +47,14 @@ function Mensagem3() {
 
 function Mensagem4() {
     document.getElementById("mensagem4").innerHTML = 
-    "👩‍🦳 : O que te faz amar ela ? <br> 👨 : Desde o olhar que ela me olha, ao jeito dela de reagir as situações, ela me mostrou que o mundo não é tão ruim assim e vale a pena viver até o fim, <br> ela foi a luz no fim do meu túnel, me tirou do fundo do poço que me encontrava, e eu quero que ela saiba que eu amo tanto ela que estou disposto a correr qualquer tipo de caminho para trazer um futuro próspero e de paz para ela.";
+    "👩🏼 : O que te faz amar ela ? <br> 🧑🏻 : Desde o olhar que ela me olha, ao jeito dela de reagir as situações, ela me mostrou que o mundo não é tão ruim assim e vale a pena viver até o fim, <br> ela foi a luz no fim do meu túnel, me tirou do fundo do poço que me encontrava, e eu quero que ela saiba que eu amo tanto ela que estou disposto a correr qualquer tipo de caminho para trazer um futuro próspero e de paz para ela.";
     mostrarMensagem(4); // Chama a função mostrarMensagem para exibir a quarta mensagem
+}
+
+function abrirPlayer() {
+    document.getElementById("playerPopup").style.display = "flex";
+}
+
+function fecharPlayer() {
+    document.getElementById("playerPopup").style.display = "none";
 }

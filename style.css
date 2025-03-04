@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
+@import url("https://fonts.google.com/specimen/Fjalla+One");
 
 body {
   font-family: "Dancing Script", cursive;
@@ -12,6 +13,40 @@ body {
   align-items: center;
   margin: 0;
   padding: 20px;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.title {
+  font-family: "Fjalla One", sans-serif;
+  font-size: 40px;
+  color: #c70039;
+  text-align: center;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+
+  opacity: 0;
+  animation: fadeInDown 1.5s ease-in-out forwards;
 }
 
 /* Contêiner para o botão e a mensagem */
@@ -57,6 +92,27 @@ body {
   margin: 10px;
   border-radius: 8px;
   transition: background-color 0.3s;
+
+  /* Onde ocorre as animações fadeinup*/
+  opacity: 0;
+  animation: fadeInUp 1.5s ease-in-out forwards;
+}
+
+/* animação nos outros botoes */
+.card-btn:nth-child(1) {
+  animation-delay: 0.5s;
+}
+
+.card-btn:nth-child(2) {
+  animation-delay: 0.8s;
+}
+
+.card-btn:nth-child(3) {
+  animation-delay: 1.1s;
+}
+
+.card-btn:nth-child(4) {
+  animation-delay: 1.4s;
 }
 
 .card-btn:hover {
@@ -151,7 +207,7 @@ body {
 
 .buttons-container {
   display: flex;
-  justify-content: space-between; /* Para espaçar as duas colunas */
+  justify-content: center; /* centraliza os botoes horizontalmente*/
   gap: 20px; /* Espaço entre as colunas */
   flex-wrap: wrap; /* Permite que as colunas quebrem para a linha de baixo em telas pequenas */
   padding: 20px;
@@ -159,7 +215,49 @@ body {
 
 .button-column {
   display: flex;
-  flex-direction: column; /* Organiza os botões em uma coluna */
+  flex-direction: row; /* Organiza os botões em uma coluna */
   gap: 20px; /* Espaço entre os botões */
-  flex: 1; /* Cada coluna ocupa metade da tela */
+}
+
+.spotify-btn {
+  padding: 20px 20px;
+  font-size: 16px;
+  background-color: #f4a7b9;
+  color: black;
+  border: 3px solid#c70039;
+  border-radius: 8px;
+  cursor: pointer;
+
+  /* Onde ocorre as animações fadeinup*/
+  opacity: 0;
+  animation: fadeInUp 1.5s ease-in-out forwards;
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 00%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content {
+  background: #c70039;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  position: relative;
+  padding-top: 50px;
+}
+
+.close {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  font-size: 34px;
+  cursor: pointer;
 }

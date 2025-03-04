@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Site para Débora</title>
+    <title>Site feito para ela !</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <h1 class="title">SURPRESA PRO MEU AMOR 💖💖💖</h1>
     <div class="buttons-container">
         <div class="button-column">
             <!-- Botão 1 -->
@@ -32,9 +34,11 @@
                 <button class="card-btn" onclick="Mensagem4()">Prometo que é o ultimo !!</button>
                 <div id="mensagem4" class="card"></div> <!-- Mensagem 4 -->
             </div>
+
         </div>
     </div>
-
+    
+    
     <button id="openCarousel" class="card-btn">Dá uma espiada nisso aqui kkkkkk</button>
     <div class="carousel-container" id="carouselContainer" style="display: none;">
         <div class="carousel">
@@ -43,7 +47,7 @@
             <img src="https://i.postimg.cc/QtQzjMbK/IMG-20241223-WA0023.jpg" alt="Foto 3">
             <img src="https://i.postimg.cc/TPm7cPBN/IMG-20241223-WA0022.jpg" alt="Foto 4">
             <img src="https://i.postimg.cc/qqp5qdbb/IMG-20250112-WA0025.jpg" alt="Foto 5">
-
+            
             <img src="https://i.postimg.cc/C5vmKnf5/IMG-20250105-WA0004.jpg" alt="Foto 1">
             <img src="https://i.postimg.cc/wT6g117V/Whats-App-Image-2025-03-02-at-20-26-41.jpg" alt="Foto 2">
             <img src="https://i.postimg.cc/QtQzjMbK/IMG-20241223-WA0023.jpg" alt="Foto 3">
@@ -51,6 +55,23 @@
             <img src="https://i.postimg.cc/qqp5qdbb/IMG-20250112-WA0025.jpg" alt="Foto 5">
         </div>
         <p class="carousel-text">Cada momento até hoje com você foi inesquecivel 💖</p>
+    </div>
+    
+    <button class="card-btn" onclick="window,location.href='coracao.html'"> Clique para ver a minha ultima surpresa 💖</button>
+
+    <button onclick="abrirPlayer()" class="spotify-btn">🎵 Ouça essa música especial!</button>
+
+    <!-- Janela flutuante do player -->
+    <div id="playerPopup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="fecharPlayer()">&times;</span>
+            <iframe id="spotifyFrame" style="border-radius:12px" 
+                src="https://open.spotify.com/embed/track/67gLKHTj5FsGwbUCcGQZFm?theme=0" 
+                width="300" height="380" frameBorder="0" 
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                loading="lazy">
+            </iframe>
+        </div>
     </div>
 
     <script src="Script.js"></script>

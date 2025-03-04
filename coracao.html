@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surpresa 💖</title>
+    <style>
+        body {
+            background-image: url("fundo.jpg");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            font-size: 25px;
+            display: flex;
+            justify-content: center;  /* Centraliza horizontalmente */
+            align-items: center;      /* Centraliza verticalmente */
+            height: 100vh;            /* Garante que o body ocupe toda a altura da tela */
+            margin: 0;                /* Remove as margens do body */
+            padding: 20px;
+            flex-direction: column;
+        }
+        
+        svg {
+            width: 800px;
+            height: 400px;
+        }
+        
+        path {
+            stroke: #ff3366;
+            stroke-width: 1;
+            fill: transparent;
+            stroke-dasharray: 99;
+            stroke-dashoffset: 500;
+            animation: draw 7s ease-in-out forwards;
+        }
+
+        text {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 4px; /* Ajustei o tamanho para melhorar a legibilidade */
+            fill: #000000; /* Cor do texto */
+            text-anchor: middle;
+            dominant-baseline: middle;
+        }
+        
+        @keyframes draw {
+            to {
+                stroke-dashoffset: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- Caminho do coração ajustado -->
+        <path d="M12 21s-6.5-4.5-9.5-9C-1 6.5 3 2 6.5 2C9 2 12 5 12 5s3-3 5.5-3C21 2 25 6.5 21.5 12c-3 4.5-9.5 9-9.5 9z" />
+        <!-- Texto centralizado dentro do coração -->
+        <text x="12" y="10">Te Amo !</text>
+    </svg>
+    <script>
+        setTimeout(() => {
+            document.querySelector('path').style.fill = "#ff3366"; // Preenche o coração após a animação do traço
+        }, 2000);
+    </script>
+</body>
+</html>
