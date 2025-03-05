@@ -1,0 +1,119 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #ffe6eb;
+    flex-direction: column;
+    overflow: hidden; /* Impede rolagem */
+    position: relative;
+    margin: 0;
+}
+
+/* Container das fotos */
+.photo-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+}
+
+.photo-container img {
+    width: 350px;
+    height: auto;
+    border-radius: 10px;
+    border: 3px solid #ff3366;
+}
+
+/* Estilos dos corações caindo */
+.heart {
+    position: absolute;
+    top: -50px; /* Começa fora da tela */
+    color: red;
+    font-size: 20px;
+    opacity: 1;
+    animation: fall linear infinite;
+    user-select: none; /* Evita seleção acidental */
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) scale(0.5);
+        opacity: 0;
+    }
+}
+
+.text {
+    font-size: 30px;
+    color: #ff3366;
+    text-align: center;
+    margin-top: 15px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+}
+
+.h1 {
+    font-size: 50px;
+    color: #ff3366;
+    text-align: center;
+    margin-top: 15px;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    /* Ajuste nas fotos para telas menores */
+    .photo-container {
+        flex-direction: column; /* Empilha as imagens */
+        gap: 10px; /* Menos espaço entre as imagens */
+    }
+
+    .photo-container img {
+        width: 80%; /* Ajusta a largura das imagens */
+        max-width: 250px; /* Limita o tamanho máximo */
+    }
+
+    /* Ajuste nos textos */
+    .text {
+        font-size: 20px;
+    }
+
+    .h1 {
+        font-size: 35px; /* Reduz tamanho do título */
+    }
+
+    /* Ajuste no efeito de corações */
+    .heart {
+        font-size: 15px; /* Reduz o tamanho do coração */
+        animation-duration: 6s; /* Deixa os corações caindo mais rápido */
+    }
+}
+
+@media (max-width: 480px) {
+    .photo-container img {
+        max-width: 200px; /* Reduz ainda mais as imagens */
+    }
+
+    .text {
+        font-size: 18px;
+    }
+
+    .h1 {
+        font-size: 30px;
+    }
+
+    .heart {
+        font-size: 12px;
+        animation-duration: 5s;
+    }
+}
