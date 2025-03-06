@@ -20,3 +20,16 @@ document.addEventListener("DOMContentLoaded", function () {
     // Criar corações continuamente
     setInterval(createHeart, 300);
 });
+
+const text = "Essa foto se tornou a minha foto favorita! ❤️";
+let i = 0;
+
+function escreverTexto() {
+    if (i < text.length) {
+        document.getElementById("mensagem").innerHTML += text.charAt(i);
+        i++;
+        setTimeout(escreverTexto, 100); // Ajuste a velocidade da digitação
+    }
+}
+
+window.onload = escreverTexto;
